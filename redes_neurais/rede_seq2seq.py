@@ -388,7 +388,7 @@ def treinar(variavel_input, comprimento, variavel_alvo, mascara, comprimento_max
     decoder_oculto = encoder_oculto[:decoder.numero_camadas]
 
     # determinar se estamos usando 'teacher forcing'
-    usar_teacher_forcing = True if random.random() < teacher_forcing_ratio else False
+    usar_teacher_forcing = True if random.random() < qtde_teacher_forcing else False
 
     # encaminhar/atravessar lote (batch) de frases através do decoder uma de cada vez
     if usar_teacher_forcing:
@@ -644,9 +644,9 @@ decoder = decoder.to(dispositivo)
 
 # configurar treino e otimização
 clip = 50.0
-teacher_forcing_ratio = 1.0
-learning_rate = 0.0001
-decoder_learning_ratio = 5.0
+qtde_teacher_forcing = 1.0
+aprendizado = 0.0001
+aprendizado_decoder = 5.0
 imprimir_cada = 1
 salvar_cada = 1
 
@@ -655,8 +655,8 @@ encoder.train()
 decoder.train()
 
 # inicializar otimizadores
-otimizador_encoder = optim.Adam(encoder.parameters(), lr=learning_rate)
-otimizador_decoder = optim.Adam(decoder.parameters(), lr=learning_rate * decoder_learning_ratio)
+otimizador_encoder = optim.Adam(encoder.parameters(), lr=aprendizado)
+otimizador_decoder = optim.Adam(decoder.parameters(), lr=aprendizado * aprendizado_decoder)
 if carregarArquivo:
     otimizador_encoder.load_state_dict(otimizador_encoder_salvo)
     otimizador_decoder.load_state_dict(otimizador_decoder_salvo)
