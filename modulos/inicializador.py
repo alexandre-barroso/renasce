@@ -1,4 +1,4 @@
-####### ÁRQUIVO INICIAL
+####### ARQUIVO INICIAL
 
 ####### Conversa #######
 ### compilação de todos os arquivos .py relevantes para rodar o simulador, sem código de programação nenhum
