@@ -1,0 +1,18 @@
+{"matriz_emocoes": [
+        {"emocao":"neutro",
+         "padroes": ["neutro"]
+        },
+        {"emocao":"feliz",
+         "padroes": ["love","linguistics","researcher","unicamp","university"]
+        },
+        {"emocao":"triste",
+         "padroes": ["bye","goodbye","hate","hateful","hating"]
+        },
+        {"emocao":"irritado",
+         "padroes": ["politics","kill","coronavirus","covid"]
+        },
+        {"emocao":"confuso",
+         "padroes": ["who are you","who am i"]
+        }
+   ]
+}
