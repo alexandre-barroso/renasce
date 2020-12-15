@@ -12,3 +12,5 @@ Abaixo, dois links do YouTube. Um é uma demonstração do programa e o outro é
 Demonstração de treino: https://youtu.be/5Fpxy4RUqYc
 
 Demonstração do programa: https://youtu.be/cHKx5qLde8Q
+
+Você pode rodar o ReNASCE apenas rodando o arquivo, em python3, 'renasce.py'.
