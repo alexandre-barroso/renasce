@@ -6,11 +6,6 @@
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
-import numpy
-numpy.seterr(divide = 'ignore')
-
-import time
-
 ### imports
 
 from random import choice
@@ -62,11 +57,11 @@ def mensagem_renasce():
         #define cor da letra (foreground) e fonte da letra
         caixa_chat.config(foreground="white", font=("Lakhin", 12 ))
     
-        #prever 'ints', elemento que vai ser usado para prever varios outros
-        ints = predizer_classe(msg)
+        #prever 'prev', elemento que vai ser usado para prever varios outros
+        prev = predizer_classe(msg)
         
         #prever e atualizar imagem 
-        emc = emocao_apresentada(ints, intents)
+        emc = emocao_apresentada(prev, banco_dados)
         atualizar_imagem(emc)
         
         #gerar pontuacao do fim aleatoriamente
@@ -93,4 +88,3 @@ def mensagem_renasce():
     #rolar chat até o fim (para poder ver a mensagem totalmente)
     caixa_chat.yview(END)
     return
-
