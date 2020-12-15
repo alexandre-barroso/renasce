@@ -1,6 +1,3 @@
-# créditos pela base/tutorial desse código: https://pytorch.org/tutorials/beginner/chatbot_tutorial.html
-# (salvo como pdf na pasta de referencias)
-
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
