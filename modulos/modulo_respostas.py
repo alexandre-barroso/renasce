@@ -1,6 +1,3 @@
-####### Módulo de Respostas 2 ########
-### funções relacionadas à elaboração das respostas do simulador
-### voltado para responder falas (não-perguntas)
 
 ### esconder erros
 import os
