@@ -13,4 +13,4 @@ Demonstração de treino: https://youtu.be/5Fpxy4RUqYc
 
 Demonstração do programa: https://youtu.be/cHKx5qLde8Q
 
-Você pode rodar o ReNASCE apenas rodando o arquivo, em python3, 'renasce.py'.
+Você pode rodar o ReNASCE apenas rodando o arquivo, em python3, 'renasce.py'. Rode o 'treinar.py' antes, caso você não tenha treinado. Lembrando que cada iteração de treino gera um arquivo de quase 300 MB no seu computador. Eu estou rodando ela em um HD externo de 1 TB dedicado exclusivamente para isso. Estou expandindo o banco de dados classificatório (emoões, em JSON) constantemente, pois a parte de programação já está completa. Agora é focar nas amostras, criação de banco de dados e otimizar sua arquitetura conforme o necessário. Talvez uma ou outra modificação na interface visual.
