@@ -24,23 +24,23 @@ classes = []
 documentos = []
 ignorar_caracteres = ['!', '?', ',', '.']
 banco_de_dados = open('dados/banco_de_dados.json').read()
-intents = json.loads(banco_de_dados)
+banco_dados = json.loads(banco_de_dados)
 
 print('\n>>> Inicializando corpus...\n')
 
-for intent in intents['matriz_emocoes']:
-    for padrao in intent['padroes']:
+for padroes in banco_dados['matriz_emocoes']:
+    for padrao in padroes['padroes']:
         
         #tokenizar cada palavra
         palavra = nltk.word_tokenize(padrao)
         palavras.extend(palavra)
         
         #adicionar cada documento ao corpus
-        documentos.append((palavra, intent['emocao']))
+        documentos.append((palavra, padroes['emocao']))
         
         #e adicionar à lista de classes
-        if intent['emocao'] not in classes:
-            classes.append(intent['emocao'])
+        if padroes['emocao'] not in classes:
+            classes.append(padroes['emocao'])
 
 print(documentos)
 
@@ -51,10 +51,10 @@ palavras = sorted(list(set(palavras)))
 #ajeita (sort) elemento da lista 'classes'
 classes = sorted(list(set(classes)))
 
-#documentos = combinação entre padrões de mensagem e intents
+#documentos = combinação entre padrões de mensagem e banco_dados
 print (len(documentos), "documentos")
 
-#dclasses = intents
+#dclasses = banco_dados
 print (len(classes), "classes", classes)
 
 #palavras = todas as palavras, vocabulário geral
@@ -95,7 +95,7 @@ for doc in documentos:
 random.shuffle(treinamento)
 treinamento = np.array(treinamento)
 
-#criar, treinar e testar listas. X = padrões, Y = intents
+#criar, treinar e testar listas. X = padrões, Y = banco_dados
 treinar_x = list(treinamento[:,0])
 treinar_y = list(treinamento[:,1])
 print("\nDados para treino criados\n")
@@ -105,7 +105,7 @@ print('\n>>> Inicializando modelo_classificatorio...\n')
 # Modelo - 3 camadas
 #Camada 1 - 128 neuronios
 #Camada 2 - 64 neuronios
-#Camada 3 - no. de neuronios = no. de intents para ser capaz de predizer cada output de intent para a funcao softmax
+#Camada 3 - no. de neuronios = no. de banco_dados para ser capaz de predizer cada output de padroes para a funcao softmax
 
 modelo_sequencial = Sequential()
 modelo_sequencial.add(Dense(128, input_shape=(len(treinar_x[0]),), activation='relu'))
