@@ -1,0 +1,5 @@
+Usei no código alguns nomes originários do inglês para ficar mais fácil buscar recursos, caso aja algum problema.
+Esses nomes normalmente se aplicam a elementos icônicos da programação de rede neural, como, por exemplo,
+"batch_sizes", "epochs", função "forward", "encoder", "decoder", "checkpoint", "EOS, "SOS", etc.
+Considerando a importância e notoriedade desses elementos, senti que não teria propósito escrever o código de outra forma.
+
