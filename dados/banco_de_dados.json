@@ -3,16 +3,16 @@
          "padroes": ["neutro"]
         },
         {"emocao":"feliz",
-         "padroes": ["love","linguistics","researcher","unicamp","university"]
+         "padroes": ["amor","linguistica","pesquisador","unicamp","universidade"]
         },
         {"emocao":"triste",
-         "padroes": ["bye","goodbye","hate","hateful","hating"]
+         "padroes": ["tchau","adeus","odio","odioso","odiando"]
         },
         {"emocao":"irritado",
-         "padroes": ["politics","kill","coronavirus","covid"]
+         "padroes": ["politica","matar","coronavirus","covid"]
         },
         {"emocao":"confuso",
-         "padroes": ["who are you","who am i"]
+         "padroes": ["quem sou eu?","quem e voce?"]
         }
    ]
 }
