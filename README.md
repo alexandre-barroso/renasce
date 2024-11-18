@@ -1,2 +1,2 @@
 
-# Sob construção (2022)
+# Projeto abandonado.
